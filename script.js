@@ -7,17 +7,16 @@ const marcelInfo = {
     height: 188
 }
 
-let bernardHigherIMC;
 const bernardIMC = calculIMC(bernardInfo);
 const marcelIMC = calculIMC(marcelInfo);
-comparePeople();
+let bernardHigherIMC = hasMarcelHigherIMC();
 
 function calculIMC(peopleInfoArray) {
     return peopleInfoArray.weight / (peopleInfoArray.height ^ 2);
 }
 
-function comparePeople() {
-    return bernardIMC > marcelIMC ? bernardHigherIMC = true : bernardHigherIMC = false;
+function hasMarcelHigherIMC() {
+    return bernardIMC > marcelIMC;
 }
 
 console.log(bernardIMC);
